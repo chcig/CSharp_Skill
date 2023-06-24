@@ -1,0 +1,19 @@
+﻿    using CSharp_Prac.DesignPattern.Create.FactoryMethod;
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PipeItemFactory GaugeFactory = new PipeGaugeFactory();
+            GaugeFactory.Operation();
+
+            PipeItemFactory JointFactory = new PipeJointFactory();
+            JointFactory.Operation();
+
+            PipeItemFactory InjectorFactory = new PipeInjectorFactory();
+            InjectorFactory.Operation();
+
+            PipeItemFactory ValveFactory = new PipeValveFactory();
+            ValveFactory.Operation();
+        }
+    }

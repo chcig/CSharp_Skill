@@ -1,0 +1,20 @@
+﻿    using CSharp_Prac.DesignPattern.Create.StepBuilder;
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SystemBuilder builder = new SystemBuilder();
+            System system = SystemBuilder
+                .Interface1_Init()
+                .Interface2_Init()
+                .Interface3_Init()
+                .Thread1_Init()
+                .Thread2_Init()
+                .Thread3_Init()
+                .Task1_Init()
+                .Task2_Init()
+                .Task3_Init()
+                .Build()
+        }
+    }

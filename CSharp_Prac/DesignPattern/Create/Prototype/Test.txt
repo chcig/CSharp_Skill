@@ -1,0 +1,23 @@
+﻿using CSharp_Prac.DesignPattern.Create.FactoryMethod;
+using CSharp_Prac.DesignPattern.Create.Prototype;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        PipeItemFactory GaugeFactory = new PipeGaugeFactory();
+        GaugeFactory.Operation();
+
+        PipeItemFactory JointFactory = new PipeJointFactory();
+        JointFactory.Operation();
+
+        PipeItemFactory InjectorFactory = new PipeInjectorFactory();
+        InjectorFactory.Operation();
+
+        PipeItemFactory ValveFactory = new PipeValveFactory();
+        ValveFactory.Operation();
+
+        PipeItemManager manager = new PipeItemManager(GaugeFactory);
+        PipeGauge cloneGauge = (PipeGauge)manager.CreatePipeItem();
+    }
+}

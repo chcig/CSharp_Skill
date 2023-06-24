@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5207BF7A-E625-40B8-A69D-6DA420BDF232}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CSharp_Prac</RootNamespace>
+    <AssemblyName>CSharp_Prac</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Button_Inheritance.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\IShape.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeGauge.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeGaugeFactory.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeInjector.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeInjectorFactory.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeItem.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeItemFactory.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeJoint.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeJointFactory.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeValve.cs" />
+    <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeValveFactory.cs" />
+    <Compile Include="DesignPattern\Create\Prototype\PipeItemManager.cs" />
+    <Compile Include="DesignPattern\Create\StepBuilder\System.cs" />
+    <Compile Include="DesignPattern\Create\StepBuilder\SystemBuilder.cs" />
+    <Compile Include="Interface\TCP_IP\eSocket.cs" />
+    <Compile Include="MyButton.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thread\Task\eTask.cs" />
+    <Compile Include="Thread\Thread\eThread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesignPattern\Create\FactoryMethod\Test.txt" />
+    <Content Include="DesignPattern\Create\Prototype\Test.txt" />
+    <Content Include="DesignPattern\Create\StepBuilder\Test.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
