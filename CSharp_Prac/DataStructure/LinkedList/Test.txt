@@ -1,14 +1,15 @@
-﻿    using CSharp_Prac.DesignPattern.Create.FactoryMethod;
-    
-    class Program
+﻿using CSharp_Prac.DataStructure.LinkedList;
+
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            eList<int> lst = new eList();
-            eList.Add(4);
-            eList.Add(5);
-            eList.getAt(0);
-            eList.removeAt(0);
-            eList.getAt(0);
-        }
+        eList<int> lst = new eList<int>();
+        lst.Add(4);
+        lst.Add(5);
+        lst.getAt(0);
+        lst.removeAt(0);
+        lst.getAt(0);
+        lst.Display();
     }
+}

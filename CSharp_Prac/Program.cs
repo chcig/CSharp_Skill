@@ -34,27 +34,21 @@ using System.Threading.Tasks;
 //        }
 //    }
 //}
-
-using CSharp_Prac.DesignPattern.Create.FactoryMethod;
-using CSharp_Prac.DesignPattern.Create.Prototype;
+using CSharp_Prac.DataStructure.LinkedList;
 
 class Program
 {
     static void Main(string[] args)
     {
-        PipeItemFactory GaugeFactory = new PipeGaugeFactory();
-        GaugeFactory.Operation();
-
-        PipeItemFactory JointFactory = new PipeJointFactory();
-        JointFactory.Operation();
-
-        PipeItemFactory InjectorFactory = new PipeInjectorFactory();
-        InjectorFactory.Operation();
-
-        PipeItemFactory ValveFactory = new PipeValveFactory();
-        ValveFactory.Operation();
-
-        PipeItemManager manager = new PipeItemManager(GaugeFactory);
-        PipeGauge cloneGauge = (PipeGauge)manager.CreatePipeItem();
+        eList<int> lst = new eList<int>();
+        lst.Add(4);
+        lst.Add(5);
+        lst.Add(6);
+        lst.Add(7);
+        lst.Add(8);
+        lst.getAt(1);
+        lst.removeAt(1);
+        lst.getAt(1);
+        lst.Display();
     }
 }
