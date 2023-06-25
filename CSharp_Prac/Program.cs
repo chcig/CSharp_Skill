@@ -58,6 +58,5 @@ class Program
         strQue.Enqueue("e");
 
         strQue.Dequeue();
-        strQue.display();
     }
 }
