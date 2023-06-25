@@ -36,10 +36,10 @@ using System.Threading.Tasks;
 
 using CSharp_Prac.DataStructure.Que;
 
+
 class Program
 {
     static void Main(string[] args)
-    {
         eQue<int> iQue = new eQue<int>();
         iQue.Enqueue(5);
         iQue.Enqueue(4);
