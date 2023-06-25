@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp_Prac.DataStructure.LinkedList
 {
-    class _node<T>
+    public class _node<T>
     {
-        public T value;
+        public T tvalue;
         public _node<T> next;
 
         public _node()
@@ -16,14 +16,18 @@ namespace CSharp_Prac.DataStructure.LinkedList
             next = null;
         }
     }
+
     public class eList<T>
     {
-        _node<T> _head;
-        _node<T> idx;
-        eList()
+        private _node<T> _head;
+        private _node<T> _iter;
+
+        public int count { get; set; }
+
+        public eList()
         {
             _head = null;
-            idx = null;
+            _iter = _head;
         }
 
         public void Add(T t)
@@ -31,25 +35,75 @@ namespace CSharp_Prac.DataStructure.LinkedList
             _node<T> curr = new _node<T>();
             if(_head == null)
             {
+                curr.tvalue = t;
                 _head = curr;
+                _iter = _head;
             }
             else
             {
-                while(idx != null)
+                int cnt = 1;
+                while(_iter.next != null)
                 {
-
+                    _iter = _iter.next;
+                    cnt++;
                 }
+
+                curr.tvalue = t;
+                _iter.next = curr;
             }
+            _iter = _head;
+            count++;
         }
 
-        public int getAt(int idx)
+        public void removeAt(int idx)
         {
-            return -1;
+            int idxCount = 0;
+            _node<T> prenode = _iter;
+            if (idx > 0)
+            {
+                while (_iter != null)
+                {
+                    if (idx == idxCount++)
+                        break;
+                    prenode = _iter;
+                    _iter = _iter.next;
+                  }
+
+                if (_iter == null)
+                    return;
+
+                prenode.next = _iter.next;
+                count--;
+            }
+            _iter = _head;
+            return;
         }
 
-        public bool removeAt(int idx)
+        public T getAt(int idx)
         {
-            return true;
+            int idxCounting = 0;
+            while (_iter != null)
+            {
+                if (idx == idxCounting++)
+                {
+                    Console.WriteLine($"Get[{idx}] : {_iter.tvalue}");
+                    _iter = _head;
+                    return _iter.tvalue;
+                }
+                _iter = _iter.next;
+            }
+            _iter = _head;
+            return default(T);
+        }
+
+        public void Display()
+        {
+            int Curridx = 0;
+            while(_iter != null)
+            {
+                Console.WriteLine($"[{Curridx++}] : {_iter.tvalue}");
+                _iter = _iter.next;
+            }
         }
 
     }
