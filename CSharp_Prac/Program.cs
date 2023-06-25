@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,26 +34,31 @@ using System.Threading.Tasks;
 //    }
 //}
 
-using CSharp_Prac.DesignPattern.Create.FactoryMethod;
-using CSharp_Prac.DesignPattern.Create.Prototype;
+using CSharp_Prac.DataStructure.Que;
 
 class Program
 {
     static void Main(string[] args)
     {
-        PipeItemFactory GaugeFactory = new PipeGaugeFactory();
-        GaugeFactory.Operation();
+        eQue<int> iQue = new eQue<int>();
+        iQue.Enqueue(5);
+        iQue.Enqueue(4);
+        iQue.Enqueue(3);
+        iQue.Enqueue(2);
+        iQue.Enqueue(1);
 
-        PipeItemFactory JointFactory = new PipeJointFactory();
-        JointFactory.Operation();
+        iQue.Dequeue();
+        iQue.display();
 
-        PipeItemFactory InjectorFactory = new PipeInjectorFactory();
-        InjectorFactory.Operation();
+        eQue<string> strQue = new eQue<string>();
 
-        PipeItemFactory ValveFactory = new PipeValveFactory();
-        ValveFactory.Operation();
+        strQue.Enqueue("a");
+        strQue.Enqueue("b");
+        strQue.Enqueue("c");
+        strQue.Enqueue("d");
+        strQue.Enqueue("e");
 
-        PipeItemManager manager = new PipeItemManager(GaugeFactory);
-        PipeGauge cloneGauge = (PipeGauge)manager.CreatePipeItem();
+        strQue.Dequeue();
+        strQue.display();
     }
 }

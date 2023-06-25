@@ -1,0 +1,28 @@
+﻿using CSharp_Prac.DataStructure.Que;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        eQue<int> iQue = new eQue<int>();
+        iQue.Enqueue(5);
+        iQue.Enqueue(4);
+        iQue.Enqueue(3);
+        iQue.Enqueue(2);
+        iQue.Enqueue(1);
+
+        iQue.Dequeue();
+        iQue.display();
+
+        eQue<string> strQue = new eQue<string>();
+
+        strQue.Enqueue("a");
+        strQue.Enqueue("b");
+        strQue.Enqueue("c");
+        strQue.Enqueue("d");
+        strQue.Enqueue("e");
+
+        strQue.Dequeue();
+        strQue.display();
+    }
+}

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Button_Inheritance.cs" />
+    <Compile Include="DataStructure\Que\eQue.cs" />
     <Compile Include="DesignPattern\Create\FactoryMethod\IShape.cs" />
     <Compile Include="DesignPattern\Create\FactoryMethod\Item\PipeGauge.cs" />
     <Compile Include="DesignPattern\Create\FactoryMethod\ItemFactory\PipeGaugeFactory.cs" />
@@ -69,6 +70,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataStructure\Que\Test.txt" />
     <Content Include="DesignPattern\Create\FactoryMethod\Test.txt" />
     <Content Include="DesignPattern\Create\Prototype\Test.txt" />
     <Content Include="DesignPattern\Create\StepBuilder\Test.txt" />
