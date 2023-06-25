@@ -35,7 +35,6 @@ using System.Threading.Tasks;
 //}
 
 using CSharp_Prac.DataStructure.Que;
-
 class Program
 {
     static void Main(string[] args)
