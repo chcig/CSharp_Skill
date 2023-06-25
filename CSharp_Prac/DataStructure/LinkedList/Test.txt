@@ -1,0 +1,14 @@
+﻿    using CSharp_Prac.DesignPattern.Create.FactoryMethod;
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            eList<int> lst = new eList();
+            eList.Add(4);
+            eList.Add(5);
+            eList.getAt(0);
+            eList.removeAt(0);
+            eList.getAt(0);
+        }
+    }
